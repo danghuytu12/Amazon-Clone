@@ -55,11 +55,11 @@ const Container = styled.div`
     background-color: white;
     width:500px;  
     padding: 20px;
-    margin-left: 50px;
+    margin-left: 80px;
     margin-top:30px;
     max-height: 400px;
     display:inline-block;
-    
+    border-radius:10px;
     align-items:center;
 `
 const Title = styled.span``
@@ -71,7 +71,7 @@ const Rating = styled.div`
     display: flex;
 `
 const Image = styled.img`
-    height: 200px;
+    height: 250px;
     width:350px;
     margin-left:100px;
     object-fit: contain;
