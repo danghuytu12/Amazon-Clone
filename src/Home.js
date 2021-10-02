@@ -20,23 +20,23 @@ function Home() {
         })
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         console.log("Call products");
         getProducts()
     }, [])
 
 
     return (
-         
+
         <Container>
-            
+
             <Banner>
 
             </Banner>
             <Content>
                 {
-                    products.map((data)=>(
-                        <Product 
+                    products.map((data) => (
+                        <Product
                             title={data.product.name}
                             price={data.product.price}
                             rating={data.product.rating}
@@ -53,10 +53,10 @@ function Home() {
 export default Home
 
 const Container = styled.div`
+background-image: url('https://i.imgur.com/SYHeuYM.jpg');
     max-width: 1500px;
     margin: 0 auto;
 `
-
 const Banner = styled.div`
     
     min-height: 600px;

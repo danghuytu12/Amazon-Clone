@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import NumberFormat from 'react-number-format';
-
+import Button from '@mui/material/Button';
+import  "./App.css";
 function CartTotal({ getTotalPrice, getCount }) {
 
     return (
@@ -9,7 +10,8 @@ function CartTotal({ getTotalPrice, getCount }) {
             <Subtotal>Subtotal ({getCount()} items): 
                 <NumberFormat value={getTotalPrice()} displayType={'text'} thousandSeparator={true} prefix={'$'} />
             </Subtotal>
-            <CheckoutButton>Proceed to checkout</CheckoutButton>
+            
+            <Button variant="contained" className="process">Proceed to checkout</Button>
         </Container>
     )
 }

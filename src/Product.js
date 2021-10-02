@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { db } from './firebase'
-
+import Button from '@mui/material/Button';
 function Product({ title, price, rating, image, id }) {
 
     const addToCart = () => {
@@ -42,11 +42,8 @@ function Product({ title, price, rating, image, id }) {
             </Rating>
             <Image src={image} />
             <ActionSection>
-                <AddToCartButton
-                    onClick={addToCart}
-                >
-                    Add to Cart
-                </AddToCartButton>
+                <Button variant="outlined" onClick={addToCart}>Add to cart</Button>
+                
             </ActionSection>
         </Container>
     )
@@ -56,13 +53,14 @@ export default Product
 
 const Container = styled.div`
     background-color: white;
-    z-index: 100;
-    flex: 1;
+    width:500px;  
     padding: 20px;
-    margin: 10px;
+    margin-left: 50px;
+    margin-top:30px;
     max-height: 400px;
+    display:inline-block;
     
-    
+    align-items:center;
 `
 const Title = styled.span``
 const Price = styled.span`
@@ -73,7 +71,9 @@ const Rating = styled.div`
     display: flex;
 `
 const Image = styled.img`
-    max-height: 200px;
+    height: 200px;
+    width:350px;
+    margin-left:100px;
     object-fit: contain;
 `
 

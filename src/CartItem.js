@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { db } from './firebase'
-
+import Button from '@mui/material/Button';
 const CartItem = ({ id, item }) => {
 
     const deleteItem = (e) => {
@@ -41,11 +41,8 @@ const CartItem = ({ id, item }) => {
                             {options}
                         </select>
                     </CartItemQuantityContainer>
-                    <CartItemDeleteContainer
-                        onClick={deleteItem}
-                    >
-                        Delete
-                    </CartItemDeleteContainer>
+                    <Button variant="text" onClick={deleteItem}>Delete</Button>
+                    
                 </CartItemInfoBottom>
             </CartItemInfo>
             <CartItemPrice>
