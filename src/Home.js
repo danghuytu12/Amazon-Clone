@@ -59,7 +59,7 @@ background-image: url('https://i.imgur.com/SYHeuYM.jpg');
 `
 const Banner = styled.div`
     
-    min-height: 600px;
+    min-height: 400px;
     background-position: center;
     background-size: cover;
     z-index: 1;

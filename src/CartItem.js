@@ -42,7 +42,7 @@ const CartItem = ({ id, item }) => {
                         </select>
                     </CartItemQuantityContainer>
                     <Button variant="text" onClick={deleteItem}>Delete</Button>
-                    
+
                 </CartItemInfoBottom>
             </CartItemInfo>
             <CartItemPrice>
@@ -70,8 +70,8 @@ const ImageContainer = styled.div`
     margin-right: 16px;
     img{
         object-fit: contain;
-        height: 100%;
-        width: 100%;
+        height: 200px;
+        width: 170px;
     }
 `
 const CartItemInfo = styled.div`
