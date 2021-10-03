@@ -33,8 +33,9 @@ function Product({ title, price, rating, image, id }) {
                 {title}
             </Title>
             <Price>
-                ${price}
+                Giá sản phẩm: {price} đ
             </Price>
+            
             <Rating>
                 {
                     Array(rating)
@@ -66,25 +67,38 @@ export default Product
 
 const Container = styled.div`
     background-color: white;
-    width:370px;
-    max-height: 400px;
+    width:250px;
+    max-height: 450px;
     display:inline-grid;
     padding:10px;
     margin:25px;
     border-radius:10px;
+    
 `
-const Title = styled.span``
+const Title = styled.span`
+align-items: center;
+justify-self: center;
+
+font-size: 15px;
+
+`
 const Price = styled.span`
-    font-weight: 500;
+    
     margin-top: 3px;
+    margin-left: 10px;
+    
+`
+const Sale=styled.span`
+
 `
 const Rating = styled.div`
     display: flex;
+    justify-self: center;
 `
 const Image = styled.img`
     height: 250px;
-    width:350px;
-    margin-left:10px;
+    width:180px;
+    margin-left:40px;
     object-fit: contain;
 `
 

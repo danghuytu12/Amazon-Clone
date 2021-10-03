@@ -13,7 +13,7 @@ const CartItem = ({ id, item }) => {
     let options = []
 
     for (let i = 1; i < Math.max(item.quantity + 1, 20); i++) {
-        options.push(<option value={i}> Qty: {i}</option>)
+        options.push(<option value={i}> Số lượng: {i}</option>)
     }
 
     const changeQuantity = (newQuantity) => {
@@ -46,7 +46,7 @@ const CartItem = ({ id, item }) => {
                 </CartItemInfoBottom>
             </CartItemInfo>
             <CartItemPrice>
-                ${item.price}
+                {item.price} đ
             </CartItemPrice>
         </Container>
     )

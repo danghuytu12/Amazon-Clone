@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { auth, provider } from './firebase'
-
+import Button from '@mui/material/Button';
 function Login({ setUser }) {
 
     const signIn = () => {
@@ -24,11 +24,8 @@ function Login({ setUser }) {
             <Content>
                 <AmazonLogo src='http://media.corporate-ir.net/media_files/IROL/17/176060/Oct18/Amazon%20logo.PNG' />
                 <h1>Sign into Amazon</h1>
-                <LoginButton
-                    onClick={signIn}
-                >
-                    Sign in with Google
-                </LoginButton>
+                <Button variant="contained" onClick={signIn}>Sign in with Google</Button>
+                
             </Content>
         </Container>
     )
@@ -42,6 +39,7 @@ const Container = styled.div`
     background-color: #f8f8f8;
     display: grid;
     place-items: center;
+   
 `
 const Content = styled.div`
     padding: 100px;
@@ -49,6 +47,7 @@ const Content = styled.div`
     border-radius: 5px;
     box-shadow: 0 1px 3px gray;
     text-align: center;
+    
 `
 const AmazonLogo = styled.img`
     height: 100px;
