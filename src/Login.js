@@ -53,12 +53,4 @@ const AmazonLogo = styled.img`
     height: 100px;
     margin-bottom: 40px;
 `
-const LoginButton = styled.button`
-    margin-top: 50px;
-    background-color: #f0c14b;
-    height: 40px;
-    border: 2px solid #a88734;
-    border-radius: 4px;
-    padding: 4px 8px;
-    cursor: pointer;
-`
+

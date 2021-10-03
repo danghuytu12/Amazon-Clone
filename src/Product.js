@@ -37,11 +37,7 @@ function Product({ title, price, rating, image, id }) {
             </Price>
             
             <Rating>
-                {
-                    Array(rating)
-                        .fill()
-                        .map(rating => <p>⭐</p>)
-                }
+                
             </Rating>
             <ActionSection>
                 <Button variant="outlined" onClick={addToCart}>Add to cart</Button>
@@ -88,9 +84,7 @@ const Price = styled.span`
     margin-left: 10px;
     
 `
-const Sale=styled.span`
 
-`
 const Rating = styled.div`
     display: flex;
     justify-self: center;
