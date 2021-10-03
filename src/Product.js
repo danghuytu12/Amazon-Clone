@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { db } from './firebase'
 import Button from '@mui/material/Button';
+import NumberFormat from 'react-number-format';
 function Product({ title, price, rating, image, id }) {
 
     const addToCart = () => {
@@ -33,7 +34,7 @@ function Product({ title, price, rating, image, id }) {
                 {title}
             </Title>
             <Price>
-                Giá sản phẩm: {price} đ
+                Giá sản phẩm: <NumberFormat value={price} displayType={'text'} thousandSeparator={true} prefix={'đ '} />
             </Price>
             
             <Rating>

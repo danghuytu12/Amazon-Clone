@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { db } from './firebase'
 import Button from '@mui/material/Button';
+import NumberFormat from 'react-number-format';
 const CartItem = ({ id, item }) => {
 
     const deleteItem = (e) => {
@@ -46,7 +47,7 @@ const CartItem = ({ id, item }) => {
                 </CartItemInfoBottom>
             </CartItemInfo>
             <CartItemPrice>
-                {item.price} đ
+                <NumberFormat value={item.price} displayType={'text'} thousandSeparator={true} prefix={'đ '} />
             </CartItemPrice>
         </Container>
     )
