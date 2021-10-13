@@ -11,7 +11,7 @@ function CartTotal({ getTotalPrice, getCount }) {
                 
             </Subtotal>
             <NumberFormat style={{fontSize:28,marginLeft:20}} value={getTotalPrice()} displayType={'text'} thousandSeparator={true} prefix={'đ '} />
-            <Button variant="contained" style={{marginLeft:60,marginTop:20}}>Proceed to checkout</Button>
+            <Button variant="contained" style={{marginLeft:70,marginTop:60}}>Proceed to checkout</Button>
         </Container>
     )
 }

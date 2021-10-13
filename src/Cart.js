@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import CartItems from './CartItems'
 import CartTotal from './CartTotal'
-
 function Cart({ cartItems }) {
 
     const getTotalPrice = () => {
@@ -15,9 +14,9 @@ function Cart({ cartItems }) {
 
     const getCount = () => {
         let count = 0;
-        // Loop through all cart items
+        
         cartItems.forEach((item) => {
-            // add the quantity of the cart item to tota;
+            
             count += item.product.quantity;
         })
 

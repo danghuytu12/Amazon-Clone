@@ -3,10 +3,8 @@ import styled from 'styled-components'
 import Product from './Product';
 import { db } from './firebase'
 import './App.css';
-
 function Home() {
     const [products, setProducts] = useState([])
-
     const getProducts = () => {
         db.collection('products').onSnapshot((snapshot) => {
             let tempProducts = []
@@ -19,7 +17,6 @@ function Home() {
             setProducts(tempProducts);
         })
     }
-
     useEffect(() => {
         console.log("Call products");
         getProducts()
@@ -72,3 +69,5 @@ const Content = styled.div`
     margin-top: -350px;
     
 `
+
+// Huy Tú

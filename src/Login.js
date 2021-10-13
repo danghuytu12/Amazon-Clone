@@ -2,10 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import { auth, provider } from './firebase'
 import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 function Login({ setUser }) {
 
     const signIn = () => {
-        auth.signInWithPopup(provider).then((result)=>{
+        auth.signInWithPopup(provider).then((result) => {
             let user = result.user;
             let newUser = {
                 name: user.displayName,
@@ -14,7 +15,7 @@ function Login({ setUser }) {
             }
             localStorage.setItem('user', JSON.stringify(newUser))
             setUser(newUser);
-        }).catch((error)=>{
+        }).catch((error) => {
             alert(error.message);
         })
     }
@@ -24,8 +25,9 @@ function Login({ setUser }) {
             <Content>
                 <AmazonLogo src='http://media.corporate-ir.net/media_files/IROL/17/176060/Oct18/Amazon%20logo.PNG' />
                 <h1>Sign into Amazon</h1>
+
                 <Button variant="contained" onClick={signIn}>Sign in with Google</Button>
-                
+
             </Content>
         </Container>
     )
