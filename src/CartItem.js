@@ -5,9 +5,9 @@ import Button from '@mui/material/Button';
 import NumberFormat from 'react-number-format';
 const CartItem = ({ id, item }) => {
 
-    const deleteItem = (e) => {
+    const deleteItem = async (e) => {
         e.preventDefault()
-        db.collection('cartItems').doc(id).delete();
+        await db.collection('cartItems').doc(id).delete();
     }
 
 
@@ -16,9 +16,8 @@ const CartItem = ({ id, item }) => {
     for (let i = 1; i < Math.max(item.quantity + 1, 20); i++) {
         options.push(<option value={i}> Số lượng: {i}</option>)
     }
-
-    const changeQuantity = (newQuantity) => {
-        db.collection('cartItems').doc(id).update({
+    const changeQuantity = async (newQuantity) => {
+        await db.collection('cartItems').doc(id).update({
             quantity: parseInt(newQuantity)
         })
     }
@@ -28,7 +27,6 @@ const CartItem = ({ id, item }) => {
             <ImageContainer>
                 <img src={item.image} />
             </ImageContainer>
-
             <CartItemInfo>
                 <CartItemInfoTop>
                     <h2>{item.name}</h2>
